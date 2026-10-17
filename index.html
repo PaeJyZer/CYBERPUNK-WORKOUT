@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06070b">
+    <title>CYBERPUNK WORKOUT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Saira+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+
+        <!-- Left column: identity, progress readout, day selector -->
+        <aside class="hud">
+            <header>
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <div>
+                        <h1>CYBERPUNK<br>WORKOUT</h1>
+                        <p class="tagline">HIGH-VOLUME ATHLETIC MATRIX // LEAN &amp; V-SHAPE</p>
+                    </div>
+                </div>
+                <div class="clock">
+                    <span id="current-date-str">--/--/----</span>
+                    <span id="today-name">SYSTEM READY</span>
+                </div>
+            </header>
+
+            <section class="readout panel" aria-live="polite">
+                <div class="readout-label" id="readout-label">PROGRESS</div>
+                <div class="readout-num">
+                    <span id="progress-percent">0</span><sup>%</sup>
+                </div>
+                <div class="segments" id="segments" aria-hidden="true"></div>
+                <div class="readout-meta" id="progress-meta">0 / 0 เซต</div>
+            </section>
+
+            <nav class="day-nav" id="day-nav" aria-label="เลือกวัน"></nav>
+        </aside>
+
+        <!-- Right column: selected day -->
+        <main>
+            <header id="day-head"></header>
+
+            <section id="workout-container" class="workout-container"></section>
+
+            <div class="action-bar">
+                <button type="button" id="reset-day-btn" class="btn btn-reset">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
+                    <span id="reset-label">RESET DAY</span>
+                </button>
+                <button type="button" id="auto-day-btn" class="btn btn-go">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v15H4zM4 10h16M9 3v4M15 3v4"/></svg>
+                    <span>GO TO TODAY</span>
+                </button>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
